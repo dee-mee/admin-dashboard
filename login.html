@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a2e;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background-color: #0f0f1f;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 300px;
+        }
+        .login-container h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .login-container .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-container .btn-google {
+            background-color: #ea4335;
+            color: white;
+        }
+        .login-container .btn-apple {
+            background-color: #000000;
+            color: white;
+        }
+        .login-container .input-group {
+            margin: 15px 0;
+        }
+        .login-container .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+        }
+        .login-container .remember-me {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .login-container .remember-me input {
+            margin-right: 10px;
+        }
+        .login-container .forgot-password {
+            color: #9a9a9a;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .login-container .forgot-password:hover {
+            text-decoration: underline;
+        }
+        .login-container .submit-btn {
+            background-color: #e91e63;
+            color: white;
+        }
+        .login-container .signup-link {
+            color: #9a9a9a;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .login-container .signup-link a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>LogIn</h2>
+        <button class="btn btn-google">Login with Google</button>
+        <button class="btn btn-apple">Login with Apple</button>
+        <form id="loginForm" action="login.php" method="post">
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Your Password" required>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember-me" name="remember">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="forgot-password">Forgot password?</div>
+            <button type="submit" class="btn submit-btn">Submit</button>
+        </form>
+        <div class="signup-link">Don't have an account? <a href="#">Signup</a></div>
+    </div>
+    <script>
+        document.getElementById('loginForm').onsubmit = function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            fetch('login.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'success.html';
+                } else {
+                    alert('Login failed: ' + data.message);
+                }
+            });
+        };
+    </script>
+</body>
+</html>
