@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+     <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="logo">
+                    <img src="images/dev.png" alt="Logo">
+                    <span class="nav-item">Dashboard</span>
+                </a>
+            </li>
+                <li>
+                    <a href="index.html"> 
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Home</span>
+                </a>
+            </li>
+                <li>
+                    <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item">Profile</span>
+                </a>
+            </li>
+                <li>
+                    <a href="wallet.html">
+                    <i class="fas fa-wallet"></i>
+                    <span class="nav-item">Wallet</span>
+                </a>
+            </li>
+                <li><a href="analytics.html">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="nav-item">Analytics</span>
+                </a>
+            </li>
+                <li><a href="tasks.html">
+                    <i class="fas fa-tasks"></i>
+                    <span class="nav-item">Tasks</span>
+                </a>
+            </li>
+                <li>
+                    <a href="settings.html" class="active">
+                    <i class="fas fa-cog"></i>
+                    <span class="nav-item">Settings</span>
+                </a>
+            </li>
+                <li>
+                    <a href="#">
+                    <i class="fas fa-question-circle"></i>
+                    <span class="nav-item">Help</span>
+                </a>
+            </li>
+                <li>
+                    <a href="#" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Log out</span>
+                </a>
+            </li>
+            </ul>
+            
+            <div class="theme-toggle">
+                <span>Light Mode</span>
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <label for="theme-toggle-checkbox" class="toggle-label"></label>
+                <span>Dark Mode</span>
+            </div>
+        </nav>
+
+    <!-- Settings -->
+<!-- Admin Panel -->
+<div class="admin-dashboard-container">
+    <!-- Settings -->
+       <!-- Users -->
+    <div class="admin-user-manager">
+        <h2>Users</h2>
+        <table class="admin-user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>johndoe@example.com</td>
+                    <td>Admin</td>
+                    <td>
+                        <button class="admin-edit-user-btn">Edit</button>
+                        <button class="admin-delete-user-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Doe</td>
+                    <td>janedoe@example.com</td>
+                    <td>User</td>
+                    <td>
+                        <button class="admin-edit-user-btn">Edit</button>
+                        <button class="admin-delete-user-btn">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="admin-add-user-btn">Add New User</button>
+    </div>
+
+    <!-- Errors -->
+    <div class="admin-error-log">
+        <h2>Error Log</h2>
+        <table class="admin-error-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Error Message</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Database connection error</td>
+                    <td>2023-02-20 14:30:00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Invalid user credentials</td>
+                    <td>2023-02-20 14:35:00</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="admin-clear-error-log-btn">Clear Error Log</button>
+    </div>
+
+    <!-- Analytics -->
+    <div class="admin-analytics-dashboard">
+        <h2>Analytics</h2>
+        <div class="admin-chart-container">
+            <canvas id="admin-chart-canvas"></canvas>
+        </div>
+        <div class="admin-statistics-container">
+            <p>Users online: <span id="admin-users-online">10</span></p>
+            <p>Page views: <span id="admin-page-views">100</span></p>
+            <p>Average session duration: <span id="admin-average-session-duration">30s</span></p>
+        </div>
+    </div>
+</div>
+</div>
+<script href="script.js"></script>
+<script>
+        // script.js
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
+            const body = document.body;
+            const nav = document.querySelector('nav');
+            const cards = document.querySelectorAll('.card');
+            const courseBoxes = document.querySelectorAll('.course-box');
+            const activeItems = document.querySelectorAll('.active');
+
+            themeToggleCheckbox.addEventListener('change', function () {
+                if (this.checked) {
+                    body.classList.add('dark-mode');
+                    nav.classList.add('dark-mode');
+                    cards.forEach(card => card.classList.add('dark-mode'));
+                    courseBoxes.forEach(box => box.classList.add('dark-mode'));
+                    activeItems.forEach(item => item.classList.add('dark-mode'));
+                } else {
+                    body.classList.remove('dark-mode');
+                    nav.classList.remove('dark-mode');
+                    cards.forEach(card => card.classList.remove('dark-mode'));
+                    courseBoxes.forEach(box => box.classList.remove('dark-mode'));
+                    activeItems.forEach(item => item.classList.remove('dark-mode'));
+                }
+            });
+        });
+    </script>
+</body>
+</html>

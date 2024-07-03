@@ -30,7 +30,7 @@ nav {
     position: relative;
     top: 0;
     bottom: 0;
-    height: 100vh;
+    height: auto;
     left: 0;
     background: #0a4296;
     width: 280px;
@@ -140,13 +140,13 @@ a.dark-mode:hover {
     left: 3px;
     width: 14px;
     height: 14px;
-    background: #fff;
+    background: #000000;
     border-radius: 50%;
     transition: left 0.3s ease;
 }
 
 #theme-toggle-checkbox:checked + .toggle-label {
-    background: #e67e22;
+    background: #034aa7;
 }
 
 #theme-toggle-checkbox:checked + .toggle-label::after {
@@ -325,3 +325,365 @@ a.dark-mode:hover {
 .js {
     color: #1f618d;
 }
+.admin-dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+.admin-config-wrapper {
+margin-bottom: 20px;
+}
+
+.admin-theme-switcher {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.admin-switch-label {
+position: relative;
+display: inline-block;
+width: 40px;
+height: 20px;
+margin-right: 10px;
+}
+
+.admin-switch-label::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 40px;
+height: 20px;
+background-color: #ccc;
+border-radius: 10px;
+transition: background-color 0.2s;
+}
+
+.admin-switch-label::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 20px;
+height: 20px;
+background-color: #fff;
+border-radius: 10px;
+transition: transform 0.2s;
+}
+
+.admin-dark-mode-checkbox:checked + .admin-switch-label::before {
+background-color: #333;
+}
+
+.admin-dark-mode-checkbox:checked + .admin-switch-label::after {
+transform: translateX(20px);
+}
+
+.admin-font-size-controller {
+margin-bottom: 10px;
+}
+
+.admin-language-selector {
+margin-bottom: 10px;
+}
+
+.admin-notification-preferences {
+margin-bottom: 10px;
+}
+
+/* Users */
+
+.admin-user-manager {
+margin-bottom: 20px;
+}
+
+.admin-user-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.admin-user-table th, .admin-user-table td {
+border: 1px solid #ddd;
+padding: 10px;
+text-align: left;
+}
+
+.admin-user-table th {
+background-color: #f0f0f0;
+}
+
+.admin-edit-user-btn, .admin-delete-user-btn {
+margin-right: 10px;
+padding: 5px 10px;
+border: none;
+border-radius: 5px;
+background-color: #4CAF50;
+color: #fff;
+cursor: pointer;
+}
+
+.admin-edit-user-btn:hover, .admin-delete-user-btn:hover {
+background-color: #3e8e41;
+}
+
+.admin-add-user-btn {
+margin-top: 10px;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+background-color: #4CAF50;
+color: #fff;
+cursor: pointer;
+}
+
+.admin-add-user-btn:hover {
+background-color: #3e8e41;
+}
+
+/* Errors */
+
+.admin-error-log {
+margin-bottom: 20px;
+}
+
+.admin-error-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.admin-error-table th, .admin-error-table td {
+border: 1px solid #ddd;
+padding: 10px;
+text-align: left;
+}
+
+.admin-error-table th {
+background-color: #f0f0f0;
+}
+
+.admin-clear-error-log-btn {
+margin-top: 10px;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+background-color: #4CAF50;
+color: #fff;
+cursor: pointer;
+}
+
+.admin-clear-error-log-btn:hover {
+background-color: #3e8e41;
+}
+
+/* Analytics */
+
+.admin-analytics-dashboard {
+margin-bottom: 20px;
+}
+
+.admin-chart-container {
+width: 100%;
+height: 300px;
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 20px;
+}
+
+.admin-statistics-container {
+margin-top: 20px;
+}
+
+.admin-statistics-container p {
+margin-bottom: 10px;
+}
+
+.admin-statistics-container span {
+font-weight: bold;
+}
+
+/*Analytics page*/
+
+  #clock {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #4cf00b;
+    margin-left: 30%;
+  }
+  
+  /*Wallet page*/
+
+
+.wallet-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .balance-container {
+    margin-bottom: 20px;
+  }
+  
+  #balance {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+ 
+.dashboard-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .metric-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    height: 300px;
+  }
+  
+  .metric-card-body {
+    text-align: center;
+  }
+  
+  .metric-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .metric-card-value {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .metric-card-percentage {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .metric-card-subtitle {
+    font-size: 14px;
+    color: #888;
+  }
+  .metric-card-icon {
+    color: #dc3545;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  
+  
+  
+
+/* Container styles */
+.customer-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+  }
+  
+  /* Header styles */
+  .customer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .customer-header h1 {
+    color: #333;
+  }
+  
+  .customer-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #4CAF50;
+  }
+  
+  .btn-secondary {
+    background-color: #007bff;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Customer list styles */
+  .customer-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .customer-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .customer-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .customer-info p {
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .customer-actions {
+    display: flex;
+    gap: 10px;
+  }

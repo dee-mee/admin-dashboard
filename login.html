@@ -93,39 +93,19 @@
         <h2>LogIn</h2>
         <button class="btn btn-google">Login with Google</button>
         <button class="btn btn-apple">Login with Apple</button>
-        <form id="loginForm" action="login.php" method="post">
-            <div class="input-group">
-                <input type="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="input-group">
-                <input type="password" name="password" placeholder="Your Password" required>
-            </div>
-            <div class="remember-me">
-                <input type="checkbox" id="remember-me" name="remember">
-                <label for="remember-me">Remember me</label>
-            </div>
-            <div class="forgot-password">Forgot password?</div>
-            <button type="submit" class="btn submit-btn">Submit</button>
-        </form>
+        <div class="input-group">
+            <input type="email" placeholder="Your Email">
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="Your Password">
+        </div>
+        <div class="remember-me">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+        </div>
+        <div class="forgot-password">Forgot password?</div>
+        <button class="btn submit-btn">Submit</button>
         <div class="signup-link">Don't have an account? <a href="#">Signup</a></div>
     </div>
-    <script>
-        document.getElementById('loginForm').onsubmit = function(e) {
-            e.preventDefault();
-            var formData = new FormData(this);
-            fetch('login.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = 'success.html';
-                } else {
-                    alert('Login failed: ' + data.message);
-                }
-            });
-        };
-    </script>
 </body>
 </html>
