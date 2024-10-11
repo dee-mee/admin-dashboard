@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title> Deemee </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="images/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -12,7 +18,7 @@
             <ul>
                 <li>
                     <a href="index.html" class="logo">
-                    <img src="images/dev.png" alt="Logo">
+                    <img src="images/admin.jpg" alt="Logo">
                     <span class="nav-item">Dashboard</span>
                 </a>
             </li>
@@ -72,65 +78,84 @@
             </div>
         </nav>
 
-
-
-        <div class="customer-container">
-            <div class="customer-header">
-              <h1>Customers</h1>
-              <div class="customer-actions">
-                <button class="btn btn-primary">+ New</button>
-                <button class="btn btn-secondary">Filter</button>
-                <button class="btn btn-secondary">Export</button>
-              </div>
+          <div class="events-section">
+            <div class="events-header">
+                <h2>Events</h2>
+                <select class="category-dropdown">
+                    <option value="health-wellness">Health & Wellness</option>
+                    <option value="business">Business</option>
+                    <option value="education">Education</option>
+                    <!-- Add more categories as needed -->
+                </select>
             </div>
-            <div class="customer-list-container">
-              <div class="customer-item">
-                <div class="customer-info">
-                  <h3>Ricky Antony</h3>
-                  <p>ricky@example.com</p>
-                  <p>(201) 200-1851</p>
-                  <p>2392 Main Avenue, Penasauka, New Jersey 021 39</p>
+            <div class="events-container">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">Mar</span>
+                        <span class="day">26</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="event-title">Crain's New York Business <span class="event-tag">Free</span></h3>
+                        <p class="event-organizer">Organized by AID MIT</p>
+                        <p class="event-time">Time: 11:00AM</p>
+                        <p class="event-duration">Duration: Feb 29 - Mar 2</p>
+                        <p class="event-location">Place: The Liberty Warehouse, New York</p>
+                    </div>
                 </div>
-                <div class="customer-actions">
-                  <button class="btn btn-secondary">Billing Address</button>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">Feb</span>
+                        <span class="day">21</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="event-title">Newmarket Nights</h3>
+                        <p class="event-organizer">Organized by University of Oxford</p>
+                        <p class="event-time">Time: 6:00AM</p>
+                        <p class="event-duration">Duration: 6:00AM - 5:00PM</p>
+                        <p class="event-location">Place: Cambridge Boat Club, Cambridge</p>
+                    </div>
                 </div>
-              </div>
-              <div class="customer-item">
-                <div class="customer-info">
-                  <h3>Emma Watson</h3>
-                  <p>emma@example.com</p>
-                  <p>(212) 228-8403</p>
-                  <p>2289 5th Avenue, New York, New York, 10037</p>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">Feb</span>
+                        <span class="day">29</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="event-title">Film Festival</h3>
+                        <p class="event-organizer">Organized by American Nuclear Society</p>
+                        <p class="event-time">Time: 11:00AM</p>
+                        <p class="event-duration">Duration: Feb 29 - Mar 2</p>
+                        <p class="event-location">Place: Workbar - Central Square, Cambridge</p>
+                    </div>
                 </div>
-                <div class="customer-actions">
-                  <button class="btn btn-secondary">Billing Address</button>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">Dec</span>
+                        <span class="day">31</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="event-title">31st Night Celebration</h3>
+                        <p class="event-organizer">Organized by Chamber Music Society</p>
+                        <p class="event-time">Time: 11:00PM</p>
+                        <p class="event-interest">280 people interested</p>
+                        <p class="event-location">Place: Tavern on the Green, New York</p>
+                    </div>
                 </div>
-              </div>
-              <div class="customer-item">
-                <div class="customer-info">
-                  <h3>Emma Watson</h3>
-                  <p>emma@example.com</p>
-                  <p>(212) 228-8403</p>
-                  <p>2289 5th Avenue, New York, New York, 10037</p>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">Dec</span>
+                        <span class="day">16</span>
+                    </div>
+                    <div class="event-details">
+                        <h3 class="event-title">Folk Festival</h3>
+                        <p class="event-organizer">Organized by Harvard University</p>
+                        <p class="event-time">Time: 9:00AM</p>
+                        <p class="event-duration">Location: Cambridge Masonic Association</p>
+                        <p class="event-location">Place: Porter Square, North Cambridge</p>
+                    </div>
                 </div>
-                <div class="customer-actions">
-                  <button class="btn btn-secondary">Billing Address</button>
-                </div>
-              </div>
-              <div class="customer-item">
-                <div class="customer-info">
-                  <h3>Emma Watson</h3>
-                  <p>emma@example.com</p>
-                  <p>(212) 228-8403</p>
-                  <p>2289 5th Avenue, New York, New York, 10037</p>
-                </div>
-                <div class="customer-actions">
-                  <button class="btn btn-secondary">Billing Address</button>
-                </div>
-              </div>
             </div>
-          </div>
-
+        </div>
 
 
 

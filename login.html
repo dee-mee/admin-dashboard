@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="images/favicon_io/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
@@ -76,6 +82,9 @@
         .login-container .submit-btn {
             background-color: #e91e63;
             color: white;
+            text-align: center;
+            text-decoration: none;
+            display: block;
         }
         .login-container .signup-link {
             color: #9a9a9a;
@@ -87,25 +96,44 @@
             text-decoration: none;
         }
     </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if (email === "" || password === "") {
+                alert("Please fill in both email and password.");
+                return false;
+            } else {
+                alert("Form submitted successfully!");
+                // Here you can add code to submit the form
+                // For now, we just redirect to the index.html page
+                window.location.href = "index.html";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="login-container">
         <h2>LogIn</h2>
         <button class="btn btn-google">Login with Google</button>
         <button class="btn btn-apple">Login with Apple</button>
-        <div class="input-group">
-            <input type="email" placeholder="Your Email">
-        </div>
-        <div class="input-group">
-            <input type="password" placeholder="Your Password">
-        </div>
-        <div class="remember-me">
-            <input type="checkbox" id="remember-me">
-            <label for="remember-me">Remember me</label>
-        </div>
-        <div class="forgot-password">Forgot password?</div>
-        <button class="btn submit-btn">Submit</button>
+        <form onsubmit="validateForm(event)">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Your Email">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Your Password">
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="forgot-password">Forgot password?</div>
+            <button type="submit" class="btn submit-btn">Submit</button>
+        </form>
         <div class="signup-link">Don't have an account? <a href="#">Signup</a></div>
-    </div>
+    </div>  
 </body>
 </html>
+

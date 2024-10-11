@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="images/favicon_io/site.webmanifest">
     <title> Deemee </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -12,7 +18,7 @@
             <ul>
                 <li>
                     <a href="index.html" class="logo">
-                    <img src="images/dev.png" alt="Logo">
+                    <img src="images/admin.jpg" alt="Logo">
                     <span class="nav-item">Dashboard</span>
                 </a>
             </li>
@@ -72,7 +78,149 @@
             </div>
         </nav>
 
-
+            <main class="main-content">
+                <div class="profile-header">
+                    <h2>Profile</h2>
+                </div>
+                <div class="profile-container">
+                    <div class="profile-info">
+                        <img src="images/admin.jpg" alt="Profile Picture" class="profile-pic">
+                        <h3>Admin Name</h3>
+                        <p>admin@example.com</p>
+                    </div>
+                    <div class="profile-details">
+                        <h3>Personal Information</h3>
+                        <div class="details-row">
+                            <label>Full Name:</label>
+                            <span>Admin Name</span>
+                        </div>
+                        <div class="details-row">
+                            <label>Email:</label>
+                            <span>admin@example.com</span>
+                        </div>
+                        <div class="details-row">
+                            <label>Phone:</label>
+                            <span>(254) 456-7890</span>
+                        </div>
+                        <div class="details-row">
+                            <label>Address:</label>
+                            <span>123 Admin Street, City, Country</span>
+                        </div>
+                        <h3>Account Settings</h3>
+                        <div class="details-row">
+                            <label>Username:</label>
+                            <span> Deemee </span>
+                        </div>
+                        <div class="details-row">
+                            <label>Password:</label>
+                            <span>*********</span>
+                            <button class="edit-btn" onclick="showChangePasswordModal()">Change</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    
+        <div id="changePasswordModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="hideChangePasswordModal()">&times;</span>
+                <h2>Change Password</h2>
+                <form id="changePasswordForm" onsubmit="handleChangePassword(event)">
+                    <div class="form-group">
+                        <label for="currentPassword">Current Password:</label>
+                        <input type="password" id="currentPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">New Password:</label>
+                        <input type="password" id="newPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmNewPassword">Confirm New Password:</label>
+                        <input type="password" id="confirmNewPassword" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="dashboard">
+        <div class="top-stats">
+            <div class="stat-box">
+                <div class="icon"><i class="fas fa-chart-pie"></i></div>
+                <div class="stat-details">
+                    <h3>Number</h3>
+                    <p>150GB</p>
+                </div>
+            </div>
+            <div class="stat-box">
+                <div class="icon"><i class="fas fa-wallet"></i></div>
+                <div class="stat-details">
+                    <h3>Revenue</h3>
+                    <p>$1,345</p>
+                </div>
+            </div>
+            <div class="stat-box">
+                <div class="icon"><i class="fas fa-exclamation-circle"></i></div>
+                <div class="stat-details">
+                    <h3>Errors</h3>
+                    <p>23</p>
+                </div>
+            </div>
+            <div class="stat-box">
+                <div class="icon"><i class="fas fa-users"></i></div>
+                <div class="stat-details">
+                    <h3>Followers</h3>
+                    <p>+45K</p>
+                </div>
+            </div>
+        </div>
+        <div class="mid-stats">
+            <div class="info-box">
+                <h3>3,072</h3>
+                <p>Total conversations</p>
+                <span>88%</span>
+            </div>
+            <div class="info-box">
+                <h3>188</h3>
+                <p>Total Sales</p>
+                <span>25%</span>
+            </div>
+            <div class="info-box">
+                <h3>12</h3>
+                <p>New Users</p>
+                <span>70%</span>
+            </div>
+ 
+        <div class="bottom-stats">
+            <div class="card-info">
+                <div class="card-details">
+                    <h4>VISA</h4>
+                    <p>1234 **** **** 5678</p>
+                    <p>Sultan Ghani</p>
+                    <p>4/26</p>
+                    <span>EXPIRED</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <div class="card-details">
+                    <h4>VISA</h4>
+                    <p>1234 **** **** 5678</p>
+                    <p>Sultan Ghani</p>
+                    <p>4/26</p>
+                    <span>EXPIRED</span>
+                </div>
+            </div>
+            <div class="card-info">
+                <div class="card-details">
+                    <h4>VISA</h4>
+                    <p>1234 **** **** 5678</p>
+                    <p>Sultan Ghani</p>
+                    <p>4/26</p>
+                    <span>EXPIRED</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
         <script>
             // script.js
     document.addEventListener('DOMContentLoaded', function () {
@@ -99,6 +247,35 @@
             }
         });
     });
+    function showChangePasswordModal() {
+        document.getElementById('changePasswordModal').style.display = 'block';
+    }
+    
+    function hideChangePasswordModal() {
+        document.getElementById('changePasswordModal').style.display = 'none';
+    }
+    
+    function handleChangePassword(event) {
+        event.preventDefault();
+    
+        const currentPassword = document.getElementById('currentPassword').value;
+        const newPassword = document.getElementById('newPassword').value;
+        const confirmNewPassword = document.getElementById('confirmNewPassword').value;
+    
+        if (newPassword !== confirmNewPassword) {
+            alert('New password and confirm password do not match.');
+            return;
+        }
+    
+        // Simulate password change (in a real application, you would send a request to the server)
+        alert('Password changed successfully.');
+    
+        // Close the modal
+        hideChangePasswordModal();
+    
+        // Reset the form
+        document.getElementById('changePasswordForm').reset();
+    }
     
         </script>
     </body>

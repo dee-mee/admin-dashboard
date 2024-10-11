@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title> Deemee </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="images/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -12,7 +18,7 @@
             <ul>
                 <li>
                     <a href="index.html" class="logo">
-                    <img src="images/dev.png" alt="Logo">
+                    <img src="images/admin.jpg" alt="Logo">
                     <span class="nav-item">Dashboard</span>
                 </a>
             </li>
@@ -73,8 +79,78 @@
         </nav>
 
 
-        <h1 id="clock"></h1>
-        <script>
+        
+        <div class="dashboard">
+            <h1>Dashboard</h1>
+             <div class="metrics">
+                <div class="metric">
+                    <h2>Today's Income</h2>
+                    <p class="value">$170</p>
+                    <p>All Customs Value</p>
+                    <div class="progress">
+                        <div class="progress-bar income"></div>
+                    </div>
+                    <p class="change">Change: 75%</p>
+                </div>
+                <div class="metric">
+                    <h2>Total Revenue</h2>
+                    <p class="value">$120</p>
+                    <p>All Customs Value</p>
+                    <div class="progress">
+                        <div class="progress-bar revenue"></div>
+                    </div>
+                    <p class="change">Change: 25%</p>
+                </div>
+                <div class="metric">
+                    <h2>New Orders</h2>
+                    <p class="value">15</p>
+                    <p>Fresh Order Amount</p>
+                    <div class="progress">
+                        <div class="progress-bar orders"></div>
+                    </div>
+                    <p class="change">Change: 50%</p>
+                </div>
+                <div class="metric">
+                    <h2>New Users</h2>
+                    <p class="value">12</p>
+                    <p>Joined New User</p>
+                    <div class="progress">
+                        <div class="progress-bar users"></div>
+                    </div>
+                    <p class="change">Change: 25%</p>
+                </div>
+            </div>
+        </div>
+   
+        <div class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li><span class="date">SEP 25</span> Responded to need <a href="#">"Volunteer opportunity"</a></li>
+                <li><span class="date">SEP 24</span> Added an interest <a href="#">"Volunteer Activities"</a></li>
+                <li><span class="date">SEP 23</span> Joined the group <a href="#">"Boardmanship Forum"</a></li>
+                <li><span class="date">SEP 21</span> Responded to need <a href="#">"In-Kind Opportunity"</a></li>
+                <li><span class="date">SEP 18</span> Created need <a href="#">"Volunteer Opportunity"</a></li>
+                <li><span class="date">SEP 17</span> Attending the event <a href="#">"Some New Event"</a></li>
+            </ul>
+        </div>
+        <div class="support-tickets">
+            <h2>Support Tickets</h2>
+            <div class="ticket-filters">
+                <button class="filter">Today</button>
+                <button class="filter">Week</button>
+                <button class="filter">Month</button>
+            </div>
+            <ul>
+                <li><span class="status pending">PENDING</span> JOKO SUBIANTO - I am facing some trouble with my viewport. When I start my</li>
+                <li><span class="status open">OPEN</span> PRABOWO WIDODO - I have some query regarding the license issue.</li>
+                <li><span class="status closed">CLOSED</span> LEE CHONG WEI - Is there any update plan for RTL version near future?</li>
+                <li><span class="status open">OPEN</span> PETER PARKER - I have some query regarding the license issue.</li>
+                <li><span class="status closed">CLOSED</span> LOGAN PAUL - Is there any update plan for RTL version near future?</li>
+            </ul>
+        </div>       
+    </div>
+ 
+    <script>
             // script.js
     document.addEventListener('DOMContentLoaded', function () {
         const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
