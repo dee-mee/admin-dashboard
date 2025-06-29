@@ -1,0 +1,27 @@
+/* Custom Dashboard Styles */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.sidebar {
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+.sidebar .nav-link {
+    color: #333;
+}
+
+.sidebar .nav-link.active {
+    color: #0d6efd;
+}
+
+.sidebar .nav-link:hover {
+    color: #0d6efd;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}

@@ -2,282 +2,199 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Deemee Admin Dashboard - Profile</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png>
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
-<link rel="manifest" href="images/favicon_io/site.webmanifest">
-    <title> Deemee </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Modern admin dashboard with Bootstrap">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html" class="logo">
-                    <img src="images/admin.jpg" alt="Logo">
-                    <span class="nav-item">Dashboard</span>
-                </a>
-            </li>
-                <li>
-                    <a href="index.html">
-                    <i class="fas fa-home"></i>
-                    <span class="nav-item">Home</span>
-                </a>
-            </li>
-                <li>
-                    <a href="profile.html">
-                    <i class="fas fa-user"></i>
-                    <span class="nav-item">Profile</span>
-                </a>
-            </li>
-                <li>
-                    <a href="wallet.html">
-                    <i class="fas fa-wallet"></i>
-                    <span class="nav-item">Wallet</span>
-                </a>
-            </li>
-                <li><a href="analytics.html">
-                    <i class="fas fa-chart-bar"></i>
-                    <span class="nav-item">Analytics</span>
-                </a>
-            </li>
-                <li><a href="tasks.html">
-                    <i class="fas fa-tasks"></i>
-                    <span class="nav-item">Tasks</span>
-                </a>
-            </li>
-                <li>
-                    <a href="settings.html">
-                    <i class="fas fa-cog"></i>
-                    <span class="nav-item">Settings</span>
-                </a>
-            </li>
-                <li>
-                    <a href="">
-                    <i class="fas fa-question-circle"></i>
-                    <span class="nav-item">Help</span>
-                </a>
-            </li>
-                <li>
-                    <a href="login.html" class="logout">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span class="nav-item">Log out</span>
-                </a>
-            </li>
-            </ul>
-            
-            <div class="theme-toggle">
-                <span>Light Mode</span>
-                <input type="checkbox" id="theme-toggle-checkbox">
-                <label for="theme-toggle-checkbox" class="toggle-label"></label>
-                <span>Dark Mode</span>
-            </div>
-        </nav>
-
-            <main class="main-content">
-                <div class="profile-header">
-                    <h2>Profile</h2>
-                </div>
-                <div class="profile-container">
-                    <div class="profile-info">
-                        <img src="images/admin.jpg" alt="Profile Picture" class="profile-pic">
-                        <h3>Admin Name</h3>
-                        <p>admin@example.com</p>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <div class="logo d-flex align-items-center px-3">
+                        <img src="images/admin.jpg" alt="Deemee Logo" width="40" height="40" class="rounded-circle me-2">
+                        <span class="fs-5 fw-bold">Deemee</span>
                     </div>
-                    <div class="profile-details">
-                        <h3>Personal Information</h3>
-                        <div class="details-row">
-                            <label>Full Name:</label>
-                            <span>Admin Name</span>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home"></i>
+                                <span class="ms-2">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="fas fa-user"></i>
+                                <span class="ms-2">Profile</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="wallet.html">
+                                <i class="fas fa-wallet"></i>
+                                <span class="ms-2">Wallet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="analytics.html">
+                                <i class="fas fa-chart-bar"></i>
+                                <span class="ms-2">Analytics</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tasks.html">
+                                <i class="fas fa-tasks"></i>
+                                <span class="ms-2">Tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.html">
+                                <i class="fas fa-cog"></i>
+                                <span class="ms-2">Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-question-circle"></i>
+                                <span class="ms-2">Help</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span class="ms-2">Log out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Profile</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="images/admin.jpg" alt="Profile Picture" class="rounded-circle mb-3" width="150">
+                                <h5 class="card-title">Admin Name</h5>
+                                <p class="card-text text-muted">admin@example.com</p>
+                            </div>
                         </div>
-                        <div class="details-row">
-                            <label>Email:</label>
-                            <span>admin@example.com</span>
-                        </div>
-                        <div class="details-row">
-                            <label>Phone:</label>
-                            <span>(254) 456-7890</span>
-                        </div>
-                        <div class="details-row">
-                            <label>Address:</label>
-                            <span>123 Admin Street, City, Country</span>
-                        </div>
-                        <h3>Account Settings</h3>
-                        <div class="details-row">
-                            <label>Username:</label>
-                            <span> Deemee </span>
-                        </div>
-                        <div class="details-row">
-                            <label>Password:</label>
-                            <span>*********</span>
-                            <button class="edit-btn" onclick="showChangePasswordModal()">Change</button>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Personal Information</h5>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Full Name</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        Admin Name
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Email</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        admin@example.com
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Phone</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        (254) 456-7890
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Address</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        123 Admin Street, City, Country
+                                    </div>
+                                </div>
+                                <hr>
+                                <h5 class="card-title mt-4">Account Settings</h5>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Username</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        Deemee
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Password</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#changePasswordModal">Change Password</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
-    
-        <div id="changePasswordModal" class="modal">
+    </div>
+
+    <!-- Change Password Modal -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
-                <span class="close-btn" onclick="hideChangePasswordModal()">&times;</span>
-                <h2>Change Password</h2>
-                <form id="changePasswordForm" onsubmit="handleChangePassword(event)">
-                    <div class="form-group">
-                        <label for="currentPassword">Current Password:</label>
-                        <input type="password" id="currentPassword" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="newPassword">New Password:</label>
-                        <input type="password" id="newPassword" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirmNewPassword">Confirm New Password:</label>
-                        <input type="password" id="confirmNewPassword" required>
-                    </div>
-                    <button type="submit" class="submit-btn">Submit</button>
-                </form>
-            </div>
-        </div>
-        <div class="dashboard">
-        <div class="top-stats">
-            <div class="stat-box">
-                <div class="icon"><i class="fas fa-chart-pie"></i></div>
-                <div class="stat-details">
-                    <h3>Number</h3>
-                    <p>150GB</p>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="changePasswordModalLabel">Change Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-            <div class="stat-box">
-                <div class="icon"><i class="fas fa-wallet"></i></div>
-                <div class="stat-details">
-                    <h3>Revenue</h3>
-                    <p>$1,345</p>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="currentPassword" class="form-label">Current Password</label>
+                            <input type="password" class="form-control" id="currentPassword">
+                        </div>
+                        <div class="mb-3">
+                            <label for="newPassword" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="newPassword">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmNewPassword" class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-control" id="confirmNewPassword">
+                        </div>
+                    </form>
                 </div>
-            </div>
-            <div class="stat-box">
-                <div class="icon"><i class="fas fa-exclamation-circle"></i></div>
-                <div class="stat-details">
-                    <h3>Errors</h3>
-                    <p>23</p>
-                </div>
-            </div>
-            <div class="stat-box">
-                <div class="icon"><i class="fas fa-users"></i></div>
-                <div class="stat-details">
-                    <h3>Followers</h3>
-                    <p>+45K</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
-        <div class="mid-stats">
-            <div class="info-box">
-                <h3>3,072</h3>
-                <p>Total conversations</p>
-                <span>88%</span>
-            </div>
-            <div class="info-box">
-                <h3>188</h3>
-                <p>Total Sales</p>
-                <span>25%</span>
-            </div>
-            <div class="info-box">
-                <h3>12</h3>
-                <p>New Users</p>
-                <span>70%</span>
-            </div>
- 
-        <div class="bottom-stats">
-            <div class="card-info">
-                <div class="card-details">
-                    <h4>VISA</h4>
-                    <p>1234 **** **** 5678</p>
-                    <p>Sultan Ghani</p>
-                    <p>4/26</p>
-                    <span>EXPIRED</span>
-                </div>
-            </div>
-            <div class="card-info">
-                <div class="card-details">
-                    <h4>VISA</h4>
-                    <p>1234 **** **** 5678</p>
-                    <p>Sultan Ghani</p>
-                    <p>4/26</p>
-                    <span>EXPIRED</span>
-                </div>
-            </div>
-            <div class="card-info">
-                <div class="card-details">
-                    <h4>VISA</h4>
-                    <p>1234 **** **** 5678</p>
-                    <p>Sultan Ghani</p>
-                    <p>4/26</p>
-                    <span>EXPIRED</span>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        <script>
-            // script.js
-    document.addEventListener('DOMContentLoaded', function () {
-        const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
-        const body = document.body;
-        const nav = document.querySelector('nav');
-        const cards = document.querySelectorAll('.card');
-        const courseBoxes = document.querySelectorAll('.course-box');
-        const activeItems = document.querySelectorAll('.active');
-    
-        themeToggleCheckbox.addEventListener('change', function () {
-            if (this.checked) {
-                body.classList.add('dark-mode');
-                nav.classList.add('dark-mode');
-                cards.forEach(card => card.classList.add('dark-mode'));
-                courseBoxes.forEach(box => box.classList.add('dark-mode'));
-                activeItems.forEach(item => item.classList.add('dark-mode'));
-            } else {
-                body.classList.remove('dark-mode');
-                nav.classList.remove('dark-mode');
-                cards.forEach(card => card.classList.remove('dark-mode'));
-                courseBoxes.forEach(box => box.classList.remove('dark-mode'));
-                activeItems.forEach(item => item.classList.remove('dark-mode'));
-            }
-        });
-    });
-    function showChangePasswordModal() {
-        document.getElementById('changePasswordModal').style.display = 'block';
-    }
-    
-    function hideChangePasswordModal() {
-        document.getElementById('changePasswordModal').style.display = 'none';
-    }
-    
-    function handleChangePassword(event) {
-        event.preventDefault();
-    
-        const currentPassword = document.getElementById('currentPassword').value;
-        const newPassword = document.getElementById('newPassword').value;
-        const confirmNewPassword = document.getElementById('confirmNewPassword').value;
-    
-        if (newPassword !== confirmNewPassword) {
-            alert('New password and confirm password do not match.');
-            return;
-        }
-    
-        // Simulate password change (in a real application, you would send a request to the server)
-        alert('Password changed successfully.');
-    
-        // Close the modal
-        hideChangePasswordModal();
-    
-        // Reset the form
-        document.getElementById('changePasswordForm').reset();
-    }
-    
-        </script>
-    </body>
-    </html>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
     
